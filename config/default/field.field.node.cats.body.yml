@@ -1,0 +1,22 @@
+uuid: 2c48c9e2-656f-4538-ac6b-e9893efc77e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.cats
+  module:
+    - text
+id: node.cats.body
+field_name: body
+entity_type: node
+bundle: cats
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

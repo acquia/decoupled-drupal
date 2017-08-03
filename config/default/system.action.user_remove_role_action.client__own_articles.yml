@@ -1,0 +1,14 @@
+uuid: 057d01da-7400-41b3-b7de-cebac3e9bd32
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.client__own_articles
+  module:
+    - user
+id: user_remove_role_action.client__own_articles
+label: 'Remove the CLIENT: own articles role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: client__own_articles

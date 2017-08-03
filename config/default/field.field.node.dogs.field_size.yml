@@ -1,0 +1,21 @@
+uuid: 23e3a663-8689-413b-84f3-e4f14fb0e0c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_size
+    - node.type.dogs
+  module:
+    - options
+id: node.dogs.field_size
+field_name: field_size
+entity_type: node
+bundle: dogs
+label: Size
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

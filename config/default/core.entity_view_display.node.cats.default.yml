@@ -1,0 +1,46 @@
+uuid: fbf64ae0-7188-4ba4-b53c-fb897f6cc7d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cats.body
+    - field.field.node.cats.field_hair
+    - field.field.node.cats.field_profile
+    - node.type.cats
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.cats.default
+targetEntityType: node
+bundle: cats
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hair:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_profile:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

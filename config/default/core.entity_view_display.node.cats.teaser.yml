@@ -1,0 +1,28 @@
+uuid: 288bddd0-1d69-4aae-8313-0c337c5d4796
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cats.body
+    - node.type.cats
+  module:
+    - text
+    - user
+id: node.cats.teaser
+targetEntityType: node
+bundle: cats
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+/.vscode
+decoupled_js/tmp/*
+vendor/*
+docroot/sites/default/files/php/*
+docroot/core/*
+docroot/modules/contrib/*

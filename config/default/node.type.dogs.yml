@@ -1,0 +1,11 @@
+uuid: 4b3c12d2-bfd9-4ff8-9a09-52a0163862f2
+langcode: en
+status: true
+dependencies: {  }
+name: Dogs
+type: dogs
+description: 'A content type for dogs.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

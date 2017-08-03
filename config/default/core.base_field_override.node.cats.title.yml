@@ -1,0 +1,18 @@
+uuid: cae17f07-7508-44c7-a5c7-89a55f5c7b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cats
+id: node.cats.title
+field_name: title
+entity_type: node
+bundle: cats
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

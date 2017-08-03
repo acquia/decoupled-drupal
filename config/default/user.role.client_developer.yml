@@ -1,0 +1,13 @@
+uuid: 5d9f0848-e3e0-492d-bfe2-bffc5f1fc408
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U4T3S1zjSQVvUmUMIYb8QKf2hcC9SFdw8Q8kdYGQiJg
+id: client_developer
+label: 'Client developer'
+weight: 3
+is_admin: false
+permissions:
+  - 'access openapi api docs'
+  - 'administer simple_oauth entities'

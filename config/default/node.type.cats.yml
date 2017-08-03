@@ -1,0 +1,11 @@
+uuid: 6f3e8167-f0e5-4c24-8272-fba1ee325b7a
+langcode: en
+status: true
+dependencies: {  }
+name: Cats
+type: cats
+description: 'A content type for cats.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

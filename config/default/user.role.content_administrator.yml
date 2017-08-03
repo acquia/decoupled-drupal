@@ -1,0 +1,14 @@
+uuid: ecefc68e-58c6-4a85-92fa-508ed685ff01
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Fbb55VkZMJAqeDyGDMBMbTQ3gxLx509sHmwUtnT3R8U
+id: content_administrator
+label: 'Content administrator'
+weight: 2
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'administer taxonomy'
+  - 'bypass node access'

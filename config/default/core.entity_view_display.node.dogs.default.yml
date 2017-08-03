@@ -1,0 +1,46 @@
+uuid: 44b248ad-8d98-4907-8da0-d5f3c1d504df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dogs.body
+    - field.field.node.dogs.field_picture
+    - field.field.node.dogs.field_size
+    - node.type.dogs
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.dogs.default
+targetEntityType: node
+bundle: dogs
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_picture:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_size:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

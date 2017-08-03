@@ -1,0 +1,14 @@
+uuid: 20921745-df3d-42fb-86e6-36f8b076a476
+name: decoupleddrupalpoc
+mail: no-reply@acquia.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
