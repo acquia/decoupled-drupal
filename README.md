@@ -5,7 +5,7 @@ This is a codebase constructed with the intent to display a decoupled architectu
 ### Setup Instructions
 
 #### Download and install dependencies
-- Fork this  repository and download locally with ```git clone [YOUR REPO]```
+- Fork this repository and download locally with ```git clone [YOUR REPO]```
 - Once the code has finished downloading, cd into the folder with ```cd decoupled-drupal```
 - If you do not have composer installed yet, install using the [website instructions](https://getcomposer.org/download/) 
 - Run the command ```composer install``` to install the required dependencies  
@@ -28,3 +28,13 @@ The next steps you allow you to import the database so you can use the test cont
 - Import the database with the command ``drush sqlc < ../_backup/db/default.sql``
 - You can now login with the command ``drush uli`` which will provide a URL to paste into your browser
 - You can now exit out of vagrant with ``exit`` and view your test content at ``http://local.drupaldecoupled.com/admin/content`` 
+
+### Preview 
+
+#### JavaScript Application 
+
+![js](https://content.screencast.com/users/BedimStudios/folders/Jing/media/18e9dfca-970a-45a5-b1b8-5f62a52d1439/00002386.png)
+
+#### Drupal Website
+
+![Drupal](https://content.screencast.com/users/BedimStudios/folders/Jing/media/0558f78c-39fa-4204-bd8f-d27598b0d29d/00002387.png)
