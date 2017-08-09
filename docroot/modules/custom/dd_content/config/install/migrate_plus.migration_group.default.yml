@@ -1,0 +1,15 @@
+uuid: 20b54ca0-4362-450d-8faf-abf3fc0fa2e4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    # List here the name of the module that provided this migration if you want
+    # this config to be removed when that module is uninstalled.
+    module:
+      - dd_content
+id: default
+label: Default
+description: 'A container for any migrations not explicitly assigned to a group.'
+source_type: null
+module: null
+shared_configuration: null

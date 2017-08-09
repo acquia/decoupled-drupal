@@ -1,0 +1,55 @@
+uuid: 0a683f3b-1f5d-4e1e-8a59-3c8d3ec4af83
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dd_content
+_core:
+  default_config_hash: mRxKhhGJwDIJdCzHd350nb3kcwsFGC2AF_LT6lP1unk
+id: cats
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Cats Migration'
+source:
+  plugin: csv
+  path: modules/custom/dd_content/data/cats.csv
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: Identifier
+    -
+      title: Title
+    -
+      body: Body
+    -
+      profile: Profile
+    -
+      hair: Hair
+process:
+  type:
+    plugin: default_value
+    default_value: cats
+  status: published
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+  field_profile:
+    source: profile
+    plugin: file_import
+  field_hair: hair
+  moderation_state:
+    plugin: default_value
+    default_value: published
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -5,6 +5,7 @@ module:
   ckeditor: 0
   datetime: 0
   dblog: 0
+  dd_content: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -15,6 +16,10 @@ module:
   image: 0
   jsonapi: 0
   link: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
   node: 0
   openapi: 0
   openapi_redoc: 0

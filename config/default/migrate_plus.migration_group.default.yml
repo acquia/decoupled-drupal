@@ -1,0 +1,15 @@
+uuid: 20b54ca0-4362-450d-8faf-abf3fc0fa2e4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dd_content
+_core:
+  default_config_hash: WyimPt-4fia6uqOfTcNxiSL0Q4JCaIl_7iE8Xn5wiwI
+id: default
+label: Default
+description: 'A container for any migrations not explicitly assigned to a group.'
+source_type: null
+module: null
+shared_configuration: null
