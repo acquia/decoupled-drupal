@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains dd_content.module.
+ */
+
+/**
+ * Implements hook_migration_plugins_alter().
+ *
+ * This implementation has to be named weirdly to avoid a hook collision.
+ */
+function dd_content__migration_plugins_alter(&$definitions) {
+  $definitions['migrate_csv']['source']['path'] = drupal_get_path('module', 'dd_content') . $definitions['migrate_csv']['source']['path'];
+}

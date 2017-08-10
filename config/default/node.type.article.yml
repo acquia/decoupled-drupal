@@ -1,7 +1,9 @@
-uuid: 2e6fea9d-52ca-43cb-88ae-fdc2484296aa
+uuid: 314e3830-0fc6-482e-b0b8-45404609c3ac
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 1PUKuyTmS6eWsKk7dveYnMRew92MLiptKHox3tMustE
 name: Article
 type: article
 description: 'just an article'

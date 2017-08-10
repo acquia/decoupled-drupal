@@ -25,4 +25,6 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_hair: true
+  field_profile: true

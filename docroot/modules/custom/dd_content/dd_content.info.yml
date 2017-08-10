@@ -1,0 +1,10 @@
+name: Decoupled Drupal Content
+type: module
+description: Decoupled Drupal default content
+core: 8.x
+package: dd
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_source_csv
+  - migrate_tools
