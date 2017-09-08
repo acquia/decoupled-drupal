@@ -1,0 +1,20 @@
+uuid: a12c99bb-8337-4d0f-bf26-65647273eefe
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning
+third_party_settings:
+  lightning:
+    bundled: true
+_core:
+  default_config_hash: FINNLf2pkhqumdQngtjMqoiVaOgXv2cHfnLPCCbB4n0
+id: layout_manager
+label: 'Layout manager'
+weight: 2
+is_admin: false
+permissions:
+  - 'administer node display'
+  - 'administer panelizer'
+  - 'administer panelizer node landing_page defaults'
+  - 'administer panelizer node page defaults'

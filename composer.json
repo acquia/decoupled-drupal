@@ -6,32 +6,37 @@
     "prefer-stable": true,
     "require": {
         "acquia/blt": "^8.3",
-        "acquia/reservoir": "1.0.0-alpha2",
+        "acquia/lightning": "^2.1.7",
         "wikimedia/composer-merge-plugin": "dev-master as 1.4.0",
         "drupal/migrate_plus": "^3.0-rc1",
         "drupal/migrate_tools": "~3",
         "drupal/migrate_source_csv": "~2",
-        "drupal/acquia_connector": "^1.12.0"
+        "drupal/acquia_connector": "^1.12.0",
+        "oomphinc/composer-installers-extender": "^1.1"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "~4.3"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "extra": {
         "enable-patching": true,
         "patches": {
             "acquia/blt": {
                 "run-server errors": "https://patch-diff.githubusercontent.com/raw/acquia/blt/pull/1798.patch"
             },
-            "acquia/reservoir": {
-                "CM": "https://patch-diff.githubusercontent.com/raw/acquia/reservoir/pull/48.patch",
-                "User error": "https://patch-diff.githubusercontent.com/raw/acquia/reservoir/pull/28.patch",
-                "Allow arranging entity forms": "https://patch-diff.githubusercontent.com/raw/acquia/reservoir/pull/53.patch",
-                "Config ui": "https://patch-diff.githubusercontent.com/raw/acquia/reservoir/pull/57.patch"
-            },
             "drupal/core": {
                 "cm uninstall": "https://www.drupal.org/files/issues/drupal-2877119-2.patch"
             }
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
@@ -55,7 +60,9 @@
                 "type:drupal-custom-theme"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"

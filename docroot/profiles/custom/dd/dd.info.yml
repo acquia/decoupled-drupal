@@ -1,0 +1,22 @@
+name: 'DD'
+type: profile
+version: 8.x-dev
+description: 'Decoupled drupal profile'
+core: '8.x'
+
+themes:
+  - bartik
+  - seven
+
+base profile:
+  name: lightning
+  excluded_dependencies:
+    - config
+    - contact
+    - search_api
+    - layout_discovery
+    - lightning_contact_form
+    - lightning_landing_page
+    - lightning_layout
+    - lightning_page
+    - lightning_search
