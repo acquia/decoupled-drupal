@@ -1,11 +1,11 @@
-uuid: 20921745-df3d-42fb-86e6-36f8b076a476
-name: decoupleddrupalpoc
+uuid: b74b27a5-327b-468a-976a-e97f4350b788
+name: Decoupled
 mail: no-reply@acquia.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /home
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

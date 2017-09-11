@@ -3,7 +3,7 @@ project:
   prefix: drupaldecoupled
   human_name: Decoupled
   profile:
-    name: reservoir
+    name: dd
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
