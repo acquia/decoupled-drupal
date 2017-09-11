@@ -2,5 +2,5 @@ access_token_expiration: 300
 refresh_token_expiration: 1209600
 _core:
   default_config_hash: YJrGmZVEcxxUt1ffTwS_DybfKrbnRkwF1GXzPj-j7aE
-private_key: /tmp/c03346253cd9a1dd5c57cf9762c7ecd51f81b8a0940991e84aee132e2a22bc4a.key
-public_key: /tmp/66cd31b0d009aa467fe0bf4ffe4d67a78b596f80bea3e113c238a6fdeae58b85.key
+private_key: ../keys/snakeoil_private.key
+public_key: ../keys/snakeoil_public.key
