@@ -40,7 +40,7 @@ process:
   body/value: body
   body/format:
     plugin: default_value
-    default_value: basic_html
+    default_value: rich_text
   field_profile:
     source: profile
     plugin: file_import
