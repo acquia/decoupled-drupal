@@ -4,7 +4,7 @@ description: Decoupled Drupal default content
 core: 8.x
 package: dd
 dependencies:
-  - migrate
-  - migrate_plus
-  - migrate_source_csv
-  - migrate_tools
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_source_csv:migrate_source_csv
+  - migrate_tools:migrate_tools

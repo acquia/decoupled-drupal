@@ -7,7 +7,6 @@
     "require": {
         "acquia/blt": "^8.3",
         "acquia/lightning": "^2.1.7",
-        "wikimedia/composer-merge-plugin": "dev-master as 1.4.0",
         "drupal/migrate_plus": "^3.0-rc1",
         "drupal/migrate_tools": "~3",
         "drupal/migrate_source_csv": "~2",
@@ -26,16 +25,13 @@
     "extra": {
         "enable-patching": true,
         "patches": {
-            "acquia/blt": {
-                "run-server errors": "https://patch-diff.githubusercontent.com/raw/acquia/blt/pull/1798.patch"
-            },
             "drupal/core": {
                 "cm uninstall": "https://www.drupal.org/files/issues/drupal-2877119-2.patch"
             }
         },
         "installer-types": [
-            "bower-asset",
-            "npm-asset"
+            "npm-asset",
+            "bower-asset"
         ],
         "installer-paths": {
             "docroot/core": [
@@ -61,8 +57,8 @@
             ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:npm-asset",
+                "type:bower-asset"
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"

@@ -7,6 +7,9 @@ project:
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
+git:
+  default_branch: master
+  remotes: {  }
 drush:
   aliases:
     remote: '${project.machine_name}.test'

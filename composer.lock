@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "042d2c75671399d67d5beb5c7f63812b",
+    "content-hash": "2c6f0e1865da77140e56835c82966929",
     "packages": [
         {
             "name": "acquia/blt",
-            "version": "8.9.0",
+            "version": "8.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/blt.git",
-                "reference": "fafe9c540ab91d61acfc96e2b00065342980e25b"
+                "reference": "1051b9185ce341d8f1ae1c4c0ef2fcb1518676e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/blt/zipball/fafe9c540ab91d61acfc96e2b00065342980e25b",
-                "reference": "fafe9c540ab91d61acfc96e2b00065342980e25b",
+                "url": "https://api.github.com/repos/acquia/blt/zipball/1051b9185ce341d8f1ae1c4c0ef2fcb1518676e5",
+                "reference": "1051b9185ce341d8f1ae1c4c0ef2fcb1518676e5",
                 "shasum": ""
             },
             "require": {
@@ -26,9 +26,11 @@
                 "composer/installers": "^1.2.0",
                 "consolidation/config": "^1.0.0",
                 "consolidation/robo": "^1.1.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.0",
                 "dflydev/dot-access-data": "^1.1.0",
                 "doctrine/common": "^2.5",
-                "drupal/coder": "^8.2.8",
+                "doctrine/inflector": "~1.1.0",
+                "drupal/coder": "^8.2.11",
                 "drush/drush": "^8.1.10",
                 "grasmash/drupal-security-warning": "^1.0.0",
                 "grasmash/yaml-cli": "^1.0.0",
@@ -37,10 +39,10 @@
                 "php": ">=5.6",
                 "phpunit/phpunit": "^4.8",
                 "squizlabs/php_codesniffer": "^2.7",
-                "symfony/console": "^2.8.11",
-                "symfony/yaml": "^2.8.11",
+                "symfony/console": "^2.8.11|^3.2",
+                "symfony/yaml": "^2.8.11|^3.2",
                 "tivie/php-os-detector": "^1.0",
-                "wikimedia/composer-merge-plugin": "dev-master"
+                "wikimedia/composer-merge-plugin": "^1.4.1"
             },
             "conflict": {
                 "drupal/core": "7.*"
@@ -50,17 +52,15 @@
                 "guzzlehttp/guzzle": "^6.2"
             },
             "suggest": {
-                "hirak/prestissimo": "^0.3"
+                "hirak/prestissimo": "^0.3",
+                "typhonius/acquia_cli": "^0.0.7"
             },
             "bin": [
                 "bin/blt"
             ],
             "type": "composer-plugin",
             "extra": {
-                "class": "Acquia\\Blt\\Composer\\Plugin",
-                "patches_applied": {
-                    "run-server errors": "https://patch-diff.githubusercontent.com/raw/acquia/blt/pull/1798.patch"
-                }
+                "class": "Acquia\\Blt\\Composer\\Plugin"
             },
             "autoload": {
                 "psr-4": {
@@ -86,7 +86,7 @@
                 "template",
                 "testing"
             ],
-            "time": "2017-07-12T18:42:37+00:00"
+            "time": "2017-09-12T16:47:30+00:00"
         },
         {
             "name": "acquia/lightning",
@@ -921,6 +921,72 @@
             "time": "2017-08-30T16:41:23+00:00"
         },
         {
+            "name": "dealerdirect/phpcodesniffer-composer-installer",
+            "version": "v0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DealerDirect/phpcodesniffer-composer-installer.git",
+                "reference": "17130f536db62570bcfc5cce59464b36e82eb092"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DealerDirect/phpcodesniffer-composer-installer/zipball/17130f536db62570bcfc5cce59464b36e82eb092",
+                "reference": "17130f536db62570bcfc5cce59464b36e82eb092",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "require-dev": {
+                "composer/composer": "*"
+            },
+            "suggest": {
+                "dealerdirect/qa-tools": "All the PHP QA tools you'll need"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Franck Nijhof",
+                    "email": "f.nijhof@dealerdirect.nl",
+                    "homepage": "http://workingatdealerdirect.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP_CodeSniffer Standards Composer Installer Plugin",
+            "homepage": "http://workingatdealerdirect.eu",
+            "keywords": [
+                "PHPCodeSniffer",
+                "PHP_CodeSniffer",
+                "code quality",
+                "codesniffer",
+                "composer",
+                "installer",
+                "phpcs",
+                "plugin",
+                "qa",
+                "quality",
+                "standard",
+                "standards",
+                "style guide",
+                "stylecheck",
+                "tests"
+            ],
+            "time": "2017-08-16T10:25:17+00:00"
+        },
+        {
             "name": "defuse/php-encryption",
             "version": "v2.1.0",
             "source": {
@@ -1359,33 +1425,33 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.2.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.2"
+                "phpunit/phpunit": "4.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
+                "psr-0": {
+                    "Doctrine\\Common\\Inflector\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1422,7 +1488,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2017-07-22T12:18:28+00:00"
+            "time": "2015-11-06T14:35:42+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -7502,7 +7568,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -8734,16 +8800,16 @@
         },
         {
             "name": "wikimedia/composer-merge-plugin",
-            "version": "dev-master",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikimedia/composer-merge-plugin.git",
-                "reference": "0e7f98d4cd3919dce5ef317323976d6e4ed7660e"
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/0e7f98d4cd3919dce5ef317323976d6e4ed7660e",
-                "reference": "0e7f98d4cd3919dce5ef317323976d6e4ed7660e",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
                 "shasum": ""
             },
             "require": {
@@ -8779,7 +8845,7 @@
                 }
             ],
             "description": "Composer plugin to merge multiple composer.json files",
-            "time": "2017-07-13T06:13:24+00:00"
+            "time": "2017-04-25T02:31:25+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -10110,7 +10176,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -10223,7 +10289,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -10276,16 +10342,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "d15dfaf71b65bf3affb80900470caf4451a8217e"
+                "reference": "6b511d7329b203a620f09a2288818d27dcc915ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/d15dfaf71b65bf3affb80900470caf4451a8217e",
-                "reference": "d15dfaf71b65bf3affb80900470caf4451a8217e",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/6b511d7329b203a620f09a2288818d27dcc915ae",
+                "reference": "6b511d7329b203a620f09a2288818d27dcc915ae",
                 "shasum": ""
             },
             "require": {
@@ -10328,7 +10394,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-15T13:31:09+00:00"
+            "time": "2017-09-11T15:55:22+00:00"
         },
         {
             "name": "textalk/websocket",
@@ -10370,18 +10436,9 @@
             "time": "2015-10-09T07:32:42+00:00"
         }
     ],
-    "aliases": [
-        {
-            "alias": "1.4.0",
-            "alias_normalized": "1.4.0.0",
-            "version": "9999999-dev",
-            "package": "wikimedia/composer-merge-plugin"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "wikimedia/composer-merge-plugin": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
