@@ -1,10 +1,14 @@
 <?php
+
 namespace Acquia\Blt\Custom\Hooks;
+
 use Acquia\Blt\Robo\BltTasks;
+
 /**
  * Defines content import hooks.
  */
 class ContentImportHook extends BltTasks {
+
   /**
    * This will be called after the setup:config-import command.
    *
@@ -14,12 +18,14 @@ class ContentImportHook extends BltTasks {
   public function postConfigImport() {
     $this->importContent();
   }
+
   /**
    * Import all available content.
    */
   protected function importContent() {
     $this->migrateContent();
   }
+
   /**
    * Migrate all content setup via migrate module.
    */
@@ -30,4 +36,5 @@ class ContentImportHook extends BltTasks {
       ->drush("cr");
     $task->run();
   }
+
 }
