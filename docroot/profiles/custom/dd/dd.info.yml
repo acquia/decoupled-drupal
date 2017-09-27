@@ -4,6 +4,8 @@ version: 8.x-dev
 description: 'Decoupled drupal profile'
 core: '8.x'
 
+config_install: true
+
 themes:
   - bartik
   - seven

@@ -1,0 +1,61 @@
+From 8153c4e63849581d2f894f4e997ea24a714398dc Mon Sep 17 00:00:00 2001
+From: Dane Powell <git@danepowell.com>
+Date: Mon, 25 Sep 2017 16:53:26 -0700
+Subject: [PATCH] ansible-role-php-xdebug-54.patch
+
+---
+ provisioning/roles/geerlingguy.php-xdebug/README.md           |  4 ++++
+ provisioning/roles/geerlingguy.php-xdebug/defaults/main.yml   |  2 ++
+ provisioning/roles/geerlingguy.php-xdebug/tasks/configure.yml | 10 ++++++++++
+ 3 files changed, 16 insertions(+)
+
+diff --git a/provisioning/roles/geerlingguy.php-xdebug/README.md b/provisioning/roles/geerlingguy.php-xdebug/README.md
+index 9c50ac1..a5adf58 100644
+--- a/provisioning/roles/geerlingguy.php-xdebug/README.md
++++ b/provisioning/roles/geerlingguy.php-xdebug/README.md
+@@ -58,6 +58,10 @@ The IDE key to use in the URL when making Xdebug requests (e.g. `http://example.
+ 
+ The maximimum function nesting level before Xdebug bails and throws a fatal exception.
+ 
++    php_xdebug_cli_disable: no
++
++(Debian/Ubuntu ONLY) Disable xdebug for the CLI SAPI.
++
+ ## Dependencies
+ 
+   - geerlingguy.php
+diff --git a/provisioning/roles/geerlingguy.php-xdebug/defaults/main.yml b/provisioning/roles/geerlingguy.php-xdebug/defaults/main.yml
+index bcb4735..3d4e3c6 100644
+--- a/provisioning/roles/geerlingguy.php-xdebug/defaults/main.yml
++++ b/provisioning/roles/geerlingguy.php-xdebug/defaults/main.yml
+@@ -18,3 +18,5 @@ php_xdebug_idekey: sublime.xdebug
+ 
+ php_xdebug_max_nesting_level: 256
+ 
++# Only used on Debian/Ubuntu.
++php_xdebug_cli_disable: no
+diff --git a/provisioning/roles/geerlingguy.php-xdebug/tasks/configure.yml b/provisioning/roles/geerlingguy.php-xdebug/tasks/configure.yml
+index 944e35b..b13be49 100644
+--- a/provisioning/roles/geerlingguy.php-xdebug/tasks/configure.yml
++++ b/provisioning/roles/geerlingguy.php-xdebug/tasks/configure.yml
+@@ -6,7 +6,17 @@
+     owner: root
+     group: root
+     mode: 0644
++  when: "'cli' not in item or ('cli' in item and not php_xdebug_cli_disable)"
+   with_items: "{{ php_extension_conf_paths }}"
+   notify:
+     - restart webserver
+     - restart php-fpm
++
++- name: Disable xdebug for PHP CLI.
++  file:
++    path: "/etc/php/{{ php_version }}/cli/conf.d/{{ php_xdebug_config_filename }}"
++    state: absent
++  when: ansible_os_family == 'Debian' and php_xdebug_cli_disable
++  notify:
++    - restart webserver
++    - restart php-fpm
+-- 
+2.11.0
+

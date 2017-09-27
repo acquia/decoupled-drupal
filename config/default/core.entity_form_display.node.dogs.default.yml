@@ -12,6 +12,7 @@ dependencies:
     - image
     - path
     - text
+    - workbench_moderation
 id: node.dogs.default
 targetEntityType: node
 bundle: dogs
