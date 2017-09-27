@@ -12,6 +12,7 @@ dependencies:
     - image
     - path
     - text
+    - workbench_moderation
 id: node.cats.default
 targetEntityType: node
 bundle: cats

@@ -10,8 +10,7 @@
         "drupal/migrate_plus": "^3.0-rc1",
         "drupal/migrate_tools": "~3",
         "drupal/migrate_source_csv": "~2",
-        "drupal/acquia_connector": "^1.12.0",
-        "oomphinc/composer-installers-extender": "^1.1"
+        "drush/drush": "<9.0.0"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "4.6.0"
