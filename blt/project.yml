@@ -40,3 +40,6 @@ behat:
   web-driver: selenium
 vm:
   enable: true
+disable-targets:
+    git:
+      commit-msg: true
