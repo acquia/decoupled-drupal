@@ -1,7 +1,0 @@
-environment: local
-drush:
-  default_alias: drupaldecoupled.local
-  aliases:
-    local: drupaldecoupled.local
-vm:
-  enable: true
