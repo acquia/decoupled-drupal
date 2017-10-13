@@ -9,6 +9,7 @@ This is a codebase constructed with the intent to display a decoupled architectu
 - Once the code has finished downloading, cd into the folder with ```cd decoupled-drupal```
 - If you do not have composer installed yet, install using the [website instructions](https://getcomposer.org/download/)
 - Run the command ```composer install``` to install the required dependencies
+- Restrict permissions on the provided snakeoil keys: ```chmod og-wrx keys/snakeoil*```
 
 #### Setup the site locally
 
