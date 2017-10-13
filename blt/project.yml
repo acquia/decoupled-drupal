@@ -38,8 +38,6 @@ target-hooks:
     command: 'echo ''No post-deploy build configured.'''
 behat:
   web-driver: selenium
-vm:
-  enable: true
 disable-targets:
     git:
       commit-msg: true
