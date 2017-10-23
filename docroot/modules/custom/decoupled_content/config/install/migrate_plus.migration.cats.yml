@@ -5,14 +5,14 @@ dependencies:
     # List here the name of the module that provided this migration if you want
     # this config to be removed when that module is uninstalled.
     module:
-      - dd_content
+      - decoupled_content
 # The source data is in CSV files, so we use the 'csv' source plugin.
-id: dogs
-label: Dogs Migration
+id: cats
+label: Cats Migration
 source:
   plugin: csv
   # Full path to the file.
-  path: modules/custom/dd_content/data/dogs.csv
+  path: modules/custom/decoupled_content/data/cats.csv
   # The number of rows at the beginning which are not data.
   header_row_count: 1
   # These are the field names from the source file representing the key
@@ -33,13 +33,13 @@ source:
     2:
       body: Body
     3:
-      picture: Picture
+      profile: Profile
     4:
-      size: Size
+      hair: Hair
 process:
   type:
     plugin: default_value
-    default_value: dogs
+    default_value: cats
   status: published
   # Most fields can be mapped directly - we just specify the destination (D8)
   # field and the corresponding field name from above, and the values will be
@@ -49,10 +49,10 @@ process:
   body/format:
     plugin: default_value
     default_value: rich_text
-  field_picture:
-    source: picture
+  field_profile:
+    source: profile
     plugin: file_import
-  field_size: size
+  field_hair: hair
   moderation_state:
     plugin: default_value
     default_value: published

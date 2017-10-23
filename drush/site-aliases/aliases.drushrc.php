@@ -361,14 +361,14 @@
 #  ) + $aliases['server'];
 
 // Local environment.
-$aliases['drupaldecoupled.local'] = array(
-  'root' => '/var/www/drupaldecoupled/docroot',
-  'uri' => 'http://local.drupaldecoupled.com',
+$aliases['decoupled.local'] = array(
+  'root' => '/var/www/decoupled/docroot',
+  'uri' => 'http://local.decoupled.com',
   );
 // Add remote connection options when alias is used outside VM.
 if ('vagrant' != $_SERVER['USER']) {
-  $aliases['drupaldecoupled.local'] += array(
-    'remote-host' => 'local.drupaldecoupled.com',
+  $aliases['decoupled.local'] += array(
+    'remote-host' => 'local.decoupled.com',
     'remote-user' => 'vagrant',
     'ssh-options' => '-o PasswordAuthentication=no -i ' . drush_server_home() . '/.vagrant.d/insecure_private_key'
   );

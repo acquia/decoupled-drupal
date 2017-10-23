@@ -4,7 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - dd_content
+      - decoupled_content
 _core:
   default_config_hash: hUTfuXrsSrRWT6tevYVMX06znW4-FjPWOYOsRdivhuM
 id: dogs
@@ -16,7 +16,7 @@ migration_group: null
 label: 'Dogs Migration'
 source:
   plugin: csv
-  path: modules/custom/dd_content/data/dogs.csv
+  path: modules/custom/decoupled_content/data/dogs.csv
   header_row_count: 1
   keys:
     - id

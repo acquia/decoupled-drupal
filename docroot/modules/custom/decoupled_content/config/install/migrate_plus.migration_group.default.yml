@@ -6,7 +6,7 @@ dependencies:
     # List here the name of the module that provided this migration if you want
     # this config to be removed when that module is uninstalled.
     module:
-      - dd_content
+      - decoupled_content
 id: default
 label: Default
 description: 'A container for any migrations not explicitly assigned to a group.'

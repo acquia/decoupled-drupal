@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains decoupled_content.module.
+ */
+
+/**
+ * Implements hook_migration_plugins_alter().
+ *
+ * This implementation has to be named weirdly to avoid a hook collision.
+ */
+function decoupled_content__migration_plugins_alter(&$definitions) {
+  $definitions['migrate_csv']['source']['path'] = drupal_get_path('module', 'decoupled_content') . $definitions['migrate_csv']['source']['path'];
+}

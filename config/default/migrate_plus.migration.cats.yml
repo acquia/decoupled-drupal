@@ -4,7 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - dd_content
+      - decoupled_content
 _core:
   default_config_hash: mRxKhhGJwDIJdCzHd350nb3kcwsFGC2AF_LT6lP1unk
 id: cats
@@ -16,7 +16,7 @@ migration_group: null
 label: 'Cats Migration'
 source:
   plugin: csv
-  path: modules/custom/dd_content/data/cats.csv
+  path: modules/custom/decoupled_content/data/cats.csv
   header_row_count: 1
   keys:
     - id

@@ -4,7 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - dd_content
+      - decoupled_content
 _core:
   default_config_hash: WyimPt-4fia6uqOfTcNxiSL0Q4JCaIl_7iE8Xn5wiwI
 id: default

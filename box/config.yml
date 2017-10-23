@@ -1,12 +1,12 @@
 # Update the hostname to the local development environment hostname.
-vagrant_hostname: local.drupaldecoupled.com
-vagrant_machine_name: drupaldecoupled
+vagrant_hostname: local.decoupled.com
+vagrant_machine_name: decoupled
 
 # Set the IP address so it doesn't conflict with other Drupal VM instances.
-vagrant_ip: 192.168.194.50
+vagrant_ip: 192.168.88.112
 
-# Use Ubuntu 14.04 LTS to more closely match Acquia Cloud environment.
-vagrant_box: geerlingguy/ubuntu1404
+# Use Ubuntu 16.04 LTS to match Acquia Cloud environments.
+vagrant_box: geerlingguy/ubuntu1604
 
 # Set drupal_site_name to the project's human-readable name.
 drupal_site_name: "Decoupled"
@@ -16,7 +16,7 @@ vagrant_synced_folders:
   # Set the local_path for the first synced folder to `.`.
   - local_path: .
     # Set the destination to the Acquia Cloud subscription machine name.
-    destination: /var/www/drupaldecoupled
+    destination: /var/www/decoupled
     type: nfs
 
 drupal_build_composer_project: false
@@ -24,9 +24,9 @@ drupal_build_composer_project: false
 # projects own `composer.json` successfully.
 drupal_build_composer: false
 drupal_composer_path: false
-drupal_composer_install_dir: "/var/www/drupaldecoupled"
-drupal_core_path: "/var/www/drupaldecoupled/docroot"
-ssh_home: /var/www/drupaldecoupled
+drupal_composer_install_dir: "/var/www/decoupled"
+drupal_core_path: "/var/www/decoupled/docroot"
+ssh_home: /var/www/decoupled
 
 drupal_db_user: drupal
 drupal_db_password: drupal
@@ -55,7 +55,7 @@ installed_extras:
   - selenium
   - xdebug
 
-# Use PHP 5.6.
+# PHP 5.6 (PHP 7.1 is being tested, see: https://docs.acquia.com/node/25726).
 php_version: "5.6"
 php_packages_extra:
   - "php{{ php_version }}-bz2"

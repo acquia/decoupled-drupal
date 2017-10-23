@@ -1,9 +1,9 @@
 project:
-  machine_name: drupaldecoupled
-  prefix: drupaldecoupled
+  machine_name: decoupled
+  prefix: decoupled
   human_name: Decoupled
   profile:
-    name: dd
+    name: decoupled
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
@@ -41,3 +41,6 @@ behat:
 disable-targets:
     git:
       commit-msg: true
+setup:
+  drupal:
+    install: { import-config: false }
