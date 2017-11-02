@@ -39,8 +39,8 @@ target-hooks:
 behat:
   web-driver: selenium
 disable-targets:
-    git:
-      commit-msg: true
+  git:
+    commit-msg: true
 setup:
   drupal:
     install: { import-config: false }
