@@ -10,10 +10,10 @@
         "drupal/migrate_plus": "^3.0-rc1",
         "drupal/migrate_tools": "~3",
         "drupal/migrate_source_csv": "~2",
-        "drush/drush": "<9.0.0"
+        "drush/drush": "<9.0.0",
+        "geerlingguy/drupal-vm": "~4.3"
     },
     "require-dev": {
-        "geerlingguy/drupal-vm": "4.6.0"
     },
     "repositories": [
         {

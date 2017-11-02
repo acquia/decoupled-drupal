@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\dd_content\Plugin\migrate\process;
+namespace Drupal\decoupled_content\Plugin\migrate\process;
 
 /**
  * @file
- * Contain \Drupal\dd_content\migrate\process.
+ * Contain \Drupal\decoupled_content\migrate\process.
  */
 
 use Drupal\migrate\MigrateExecutableInterface;
@@ -24,7 +24,7 @@ class FileImport extends ProcessPluginBase {
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-    $source = drupal_get_path('module', 'dd_content') . '/data/images/' . $value;
+    $source = drupal_get_path('module', 'decoupled_content') . '/data/images/' . $value;
     if (!$uri = file_unmanaged_copy($source)) {
       return [];
     }

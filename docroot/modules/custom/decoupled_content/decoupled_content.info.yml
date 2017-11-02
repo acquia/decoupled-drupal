@@ -2,7 +2,7 @@ name: Decoupled Drupal Content
 type: module
 description: Decoupled Drupal default content
 core: 8.x
-package: dd
+package: decoupled
 dependencies:
   - drupal:migrate
   - migrate_plus:migrate_plus

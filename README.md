@@ -19,7 +19,7 @@ Next you will set up the local Drupal site using [BLT](http://blt.readthedocs.io
 - The next step will utilize DrupalVM, so first install [Vagrant](https://www.vagrantup.com/downloads.html) & [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 - You will now setup your VM using the BLT command: ```blt vm```
 - Next you will build and install the Drupal installation: ```blt setup```
-- You will now have the initial Drupal website ready  at ```http://local.drupaldecoupled.com```
+- You will now have the initial Drupal website ready  at ```http://local.decoupled.com```
 
 ### Preview
 
