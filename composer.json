@@ -5,12 +5,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "8.9.5",
+        "acquia/blt": "^8.9.10",
         "acquia/lightning": "^2.1.7",
-        "drupal/migrate_plus": "^3.0-rc1",
-        "drupal/migrate_tools": "~3",
+        "drupal/migrate_plus": "^4.0-beta1",
+        "drupal/migrate_tools": "^4.0-beta1",
         "drupal/migrate_source_csv": "~2",
-        "drush/drush": "<9.0.0",
         "geerlingguy/drupal-vm": "~4.3"
     },
     "require-dev": {
@@ -24,9 +23,6 @@
     "extra": {
         "enable-patching": true,
         "patches": {
-            "acquia/blt": {
-                "cm install from profile": "https://patch-diff.githubusercontent.com/raw/acquia/blt/pull/2032.patch"
-            },
             "drupal/core": {
                 "cm uninstall": "https://www.drupal.org/files/issues/drupal-2877119-2.patch",
                 "cm install from profile core": "https://www.drupal.org/files/issues/2788777-91.patch"

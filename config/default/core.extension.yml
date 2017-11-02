@@ -37,14 +37,11 @@ module:
   lightning_media_image: 0
   lightning_media_instagram: 0
   lightning_media_twitter: 0
-  lightning_media_video: 0
   lightning_roles: 0
   lightning_scheduled_updates: 0
   lightning_workflow: 0
   link: 0
-  media_entity: 0
-  media_entity_document: 0
-  media_entity_image: 0
+  media: 0
   media_entity_instagram: 0
   media_entity_twitter: 0
   menu_ui: 0
@@ -75,8 +72,6 @@ module:
   toolbar: 0
   update: 0
   user: 0
-  video_embed_field: 0
-  video_embed_media: 0
   views_infinite_scroll: 0
   views_ui: 0
   workbench_moderation: 0
