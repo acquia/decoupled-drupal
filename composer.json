@@ -7,8 +7,8 @@
     "require": {
         "acquia/blt": "^8.9.10",
         "acquia/lightning": "^2.1.7",
-        "drupal/migrate_plus": "^3.0-rc1",
-        "drupal/migrate_tools": "~3",
+        "drupal/migrate_plus": "^4.0-beta1",
+        "drupal/migrate_tools": "^4.0-beta1",
         "drupal/migrate_source_csv": "~2",
         "geerlingguy/drupal-vm": "~4.3"
     },
