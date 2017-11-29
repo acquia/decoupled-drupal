@@ -1,6 +1,14 @@
 {
     "name": "acquia/blt-project",
     "description": "Project template for Drupal 8 sites built with BLT.",
+    "authors": [
+        {
+            "name": "Acquia Engineering",
+            "homepage": "https://www.acquia.com",
+            "role": "Maintainer"
+        }
+    ],
+    "license": "MIT",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
